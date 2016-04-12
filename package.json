@@ -1,0 +1,16 @@
+{
+  "name": "electron-request-response",
+  "version": "1.0.0",
+  "description": "A package that makes it easy to handle request response across electron render processes and the main process",
+  "main": "client.js",
+  "repository": "https://github.com/ayasin/electron-request-response.git",
+  "scripts": {
+    "test": "jasmine-node spec"
+  },
+  "author": "ayasin",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.10.0",
+    "uuid": "^2.0.1"
+  }
+}
