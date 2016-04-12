@@ -1,0 +1,1 @@
+throw String('You can not import electron-request-response this way.  Please import electron-request-response/main or electron-request-response/render depending on if you\'re in the main or a render (BrowserWindow) process');

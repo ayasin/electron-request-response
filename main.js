@@ -1,7 +1,7 @@
 var ipcMain = require('electron').ipcMain;
 var UUID = require('uuid');
 var _ = require('lodash');
-var CONSTANTS = require('./constants');
+var CONSTANTS = require('./lib/constants');
 
 var hosts = {};
 
@@ -67,5 +67,6 @@ hosts[CONSTANTS.MAIN_PROCESS_HOST] = {};
 
 module.exports = {
   makeAddressable: makeAddressable,
-  registerMainProcessRoute: registerMainProcessRoute
+  registerMainProcessRoute: registerMainProcessRoute,
+  CONSTANTS: CONSTANTS
 };

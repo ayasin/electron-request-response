@@ -1,6 +1,6 @@
 var ipc = require('electron').ipcRenderer;
 var UUID = require('uuid');
-var CONSTANTS = require('./constants.js');
+var CONSTANTS = require('./lib/constants.js');
 
 let routes = {};
 
@@ -58,5 +58,6 @@ ipc.on(CONSTANTS.ROUTER_ROUTE_REQUEST, function (event, message) {
 
 module.exports = {
   request: request,
-  registerRoute: registerRoute
+  registerRoute: registerRoute,
+  CONSTANTS: CONSTANTS
 };

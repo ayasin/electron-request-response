@@ -2,7 +2,7 @@
 This package allows you to communicate with the main process or render processes via a rest like interface.
 
 ### Why not IPC?
-The IPC mechanism in Electron is quite powerful, but also quite cumbersome.  A rest like interface is much more friendly 
+The IPC mechanism in Electron is quite powerful, but also quite cumbersome.  A rest like interface is much more friendly
 and also more familiar to most JavaScript developers.
 
 ### Concepts
@@ -14,19 +14,19 @@ and also more familiar to most JavaScript developers.
 
 In the main process:
 ```js
-var router = require('electron-request-response').main;
+var router = require('electron-request-response/main');
 
 // electron startup stuff omitted
 
 app.on('ready', () => {
   firstWindow = new BrowserWindow({height: 700, width: 800, frame: true, resizeable: true});
   secondWindow = new BrowserWindow({height: 700, width: 800, frame: true, resizeable: true});
-  
+
   router.makeAddressable('first-window', firstWindow);
   router.makeAddressable('second-window', secondWindow);
-  
+
   // there's no need to make a host unaddressable, this will happen automatically when the window is closed.
-  
+
   // do some other stuff
 }
 
@@ -34,7 +34,7 @@ app.on('ready', () => {
 
 Somewhere in the first window JS files
 ```js
-var router = require('electron-request-response').render;
+var router = require('electron-request-response/render');
 
 // do some stuff that makes us want to communiate with second-window
 
@@ -56,7 +56,7 @@ router.request('second-window', '/some/path', msgObj)
 
 Somewhere in the second window JS files
 ```js
-var router = require('electron-request-response').render;
+var router = require('electron-request-response/render');
 
 // register a route
 
