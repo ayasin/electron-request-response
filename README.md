@@ -10,7 +10,11 @@ and also more familiar to most JavaScript developers.
 * **Host** - either the main process (`CONSTANTS.MAIN_PROCESS.HOST`) or the name of any BrowserWindow which you have made addressable via the `makeAddressable(name, browserWindow)` method
 * **Route** - an addressable endpoint.  You register these in either the main process for use with the main process host, or in BrowserWindow processes when calling methods in those BrowserWindow processes.
 
-### Usage
+### API docs
+
+You can find the API documentation [in the Wiki for this repo](https://github.com/ayasin/electron-request-response/wiki)
+
+### Quick start
 
 In the main process:
 ```js
