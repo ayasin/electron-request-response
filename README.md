@@ -1,5 +1,5 @@
 # electron-request-response
-This package allows you to communicate with the main process or render processes via a rest like interface.
+This package allows you to communicate with the main process or render processes via a rest like interface. This package can only be used as part of an [Electron](http://electron.atom.io) app, it is not designed to be used with just a Node server or in a browser.
 
 ### Why not IPC?
 The IPC mechanism in Electron is quite powerful, but also quite cumbersome.  A rest like interface is much more friendly
