@@ -15,8 +15,8 @@ function makeAddressable (name, browserWindow) {
   });
 }
 
-function registerMainProcessRoute (route, callback) {
-  hosts[CONSTANTS.MAIN_PROCESS_HOST].route = callback;
+function registerRoute (route, callback) {
+  hosts[CONSTANTS.MAIN_PROCESS_HOST][route] = callback;
 }
 
 function routeRequest (request, done) {
@@ -67,6 +67,6 @@ hosts[CONSTANTS.MAIN_PROCESS_HOST] = {};
 
 module.exports = {
   makeAddressable: makeAddressable,
-  registerMainProcessRoute: registerMainProcessRoute,
+  registerRoute: registerRoute,
   CONSTANTS: CONSTANTS
 };
