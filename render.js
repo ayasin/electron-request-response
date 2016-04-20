@@ -1,3 +1,5 @@
+'use strict';
+
 var ipc = require('electron').ipcRenderer;
 var UUID = require('uuid');
 var CONSTANTS = require('./lib/constants.js');

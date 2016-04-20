@@ -1,3 +1,5 @@
+'use strict';
+
 var ipcMain = require('electron').ipcMain;
 var UUID = require('uuid');
 var _ = require('lodash');
